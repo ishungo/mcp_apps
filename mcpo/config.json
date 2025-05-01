@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "disk": {
+      "command": "python3",
+      "args": [
+        "/home/ubuntu/app/mcp_apps/src/disk_info.py"
+      ]
+    }
+  }
+}
