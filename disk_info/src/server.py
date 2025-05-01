@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-import psutil
+import disk_util
 
 # 定数の準備
 
@@ -7,12 +7,7 @@ mcp = FastMCP("Server-disk-info")
 
 # サーバのdisk容量を取得する
 def get_disk_usage() -> str:
-    disk = psutil.disk_usage("/")
-    total = disk.total / (1024 ** 3)
-    used = disk.used / (1024 ** 3)
-    free = disk.free / (1024 ** 3)
-    percent = disk.percent
-    usage = f"Total: {total:.2f} GB\nUsed: {used:.2f} GB\nFree: {free:.2f} GB\nPercent: {percent}%"
+    usage = disk_util.get_disk_usage()
     return usage
 
 

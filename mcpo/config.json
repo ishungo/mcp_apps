@@ -3,7 +3,7 @@
     "disk": {
       "command": "python3",
       "args": [
-        "/home/ubuntu/app/mcp_apps/src/disk_info.py"
+        "./mcp_apps/disk_info/src/server.py"
       ]
     }
   }
