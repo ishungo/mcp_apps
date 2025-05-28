@@ -19,6 +19,16 @@ def get_disk_usage() -> str:
     # print(to_markdown_table(table))
     return to_markdown_table(table)
 
+def get_memory_usage() -> str:
+    header = ["Total[GB]", "Used[GB]", "Free[GB]", "Percent[%]"]
+    mem = psutil.virtual_memory()
+    total = mem.total / (1024 ** 3)
+    used = mem.used / (1024 ** 3)
+    free = mem.available / (1024 ** 3)
+    percent = mem.percent
+    body = [[f"{total:.2f}", f"{used:.2f}", f"{free:.2f}", str(percent)]]
+    table = [header] + body
+    return to_markdown_table(table)
 
 def to_markdown_table(table: list[list[str]], header: bool = True) -> str:
     col_num = len(table[0])
@@ -47,6 +57,6 @@ def to_markdown_table(table: list[list[str]], header: bool = True) -> str:
             table_str += row_str + "\n"
     return table_str
 
-
 if __name__ == "__main__":
-    print(get_disk_usage())
+    # print(get_disk_usage())
+    print(get_memory_usage())
