@@ -19,6 +19,7 @@ def get_disk_usage() -> str:
     # print(to_markdown_table(table))
     return to_markdown_table(table)
 
+# サーバのメモリ使用量を取得する
 def get_memory_usage() -> str:
     header = ["Total[GB]", "Used[GB]", "Free[GB]", "Percent[%]"]
     mem = psutil.virtual_memory()
