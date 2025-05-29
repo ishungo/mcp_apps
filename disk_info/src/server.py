@@ -13,6 +13,7 @@ def get_disk_usage() -> str:
 
 @mcp.tool()
 def disk_info() -> str:
+    """ サーバのディスク使用量を取得する """
     return get_disk_usage()
 
 
@@ -24,6 +25,7 @@ def get_memory_usage() -> str:
 
 @mcp.tool()
 def memory_info() -> str:
+    """ サーバのメモリ使用量を取得する """
     return get_memory_usage()
 
 if __name__ == "__main__":
