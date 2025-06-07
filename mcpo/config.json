@@ -5,6 +5,12 @@
       "args": [
         "./mcp_apps/disk_info/src/server.py"
       ]
+    },
+    "calendar": {
+      "command": "python3",
+      "args": [
+        "./mcp_apps/calendar/src/server.py"
+      ]
     }
   }
 }
